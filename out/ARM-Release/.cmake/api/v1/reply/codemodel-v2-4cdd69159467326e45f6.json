@@ -1,0 +1,185 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"build" : "lib/MT3620_M4_Driver",
+					"childIndexes" : 
+					[
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "MT3620_lib/MT3620_M4_Driver",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib/MT3620_M4_Driver/lib/MT3620_M4_BSP",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "MT3620_lib/MT3620_M4_BSP",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "tx",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "tx",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Bare_Metal_RTApp_GPIO",
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "MT3620_M4_Driver",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "MT3620_M4_BSP",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "tx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Bare_Metal_RTApp_GPIO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bare_Metal_RTApp_GPIO-Release-7a25f0e6af181e90f089.json",
+					"name" : "Bare_Metal_RTApp_GPIO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "MT3620_M4_BSP::@65d7ac6506b1e25f9f50",
+					"jsonFile" : "target-MT3620_M4_BSP-Release-eaac399eb5a663703f8f.json",
+					"name" : "MT3620_M4_BSP",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "MT3620_M4_Driver::@0a784b01baa11b8c1400",
+					"jsonFile" : "target-MT3620_M4_Driver-Release-d0a3bfb13f44fa115595.json",
+					"name" : "MT3620_M4_Driver",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MakeImage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MakeImage-Release-e1cbbc6dce581c9b8518.json",
+					"name" : "MakeImage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "tx::@015f7f2a3f1fc6c8bd94",
+					"jsonFile" : "target-tx-Release-ad4e61545d7774f42a02.json",
+					"name" : "tx",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dave/GitHub/MT3620_RTApp_BareMetal_GPIO/out/ARM-Release",
+		"source" : "/home/dave/GitHub/MT3620_RTApp_BareMetal_GPIO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
