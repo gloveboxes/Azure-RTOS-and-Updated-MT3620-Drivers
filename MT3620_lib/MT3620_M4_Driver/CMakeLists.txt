@@ -29,16 +29,18 @@ TARGET_INCLUDE_DIRECTORIES(MT3620_M4_Driver PUBLIC
                            ./HDL/inc
                            ../MT3620_M4_BSP/CMSIS/include
                            ../MT3620_M4_BSP/mt3620/inc
-                           ../MT3620_M4_BSP/printf)
+                           ../MT3620_M4_BSP/printf
+                           )
 
 
-ADD_SUBDIRECTORY(../MT3620_M4_BSP ./lib/MT3620_M4_BSP)
-TARGET_LINK_LIBRARIES(MT3620_M4_Driver PUBLIC MT3620_M4_BSP)
+# ADD_SUBDIRECTORY(../MT3620_M4_BSP ./lib/MT3620_M4_BSP)
+# TARGET_LINK_LIBRARIES(MT3620_M4_Driver PUBLIC MT3620_M4_BSP)
 
 
 if(DEFINED OSAI_FREERTOS)
 ADD_SUBDIRECTORY(../MT3620_M4_BSP/FreeRTOS ./MT3620_M4_BSP/FreeRTOS)
 TARGET_LINK_LIBRARIES(MT3620_M4_Driver PUBLIC MT3620_M4_FreeRTOS)
 endif()
+
 TARGET_INCLUDE_DIRECTORIES(MT3620_M4_Driver PUBLIC
                            ../OS_HAL/inc)

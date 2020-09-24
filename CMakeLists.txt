@@ -13,7 +13,7 @@ project(Bare_Metal_RTApp_GPIO C)
 azsphere_configure_tools(TOOLS_REVISION "20.07")
 
 add_compile_definitions(OSAI_BARE_METAL)
-add_compile_definitions(OSAI_ENABLE_DMA)
+# add_compile_definitions(OSAI_ENABLE_DMA)
 
 # When place CODE_REGION in FLASH instead of TCM, please enable this definition:
 # add_compile_definitions(M4_ENABLE_XIP_FLASH)
@@ -25,28 +25,20 @@ add_executable(${PROJECT_NAME}
                #main.c
                ./demo_threadx/demo_threadx.c 
                ./demo_threadx/rtcoremain.c
-               ./MT3620_lib/OS_HAL/src/os_hal_uart.c
-               ./MT3620_lib/OS_HAL/src/os_hal_gpio.c
-               ./MT3620_lib/OS_HAL/src/os_hal_dma.c
-               ./MT3620_lib/OS_HAL/src/os_hal_gpt.c
+#               ./MT3620_lib/OS_HAL/src/os_hal_uart.c
+#               ./MT3620_lib/OS_HAL/src/os_hal_gpio.c
+#               ./MT3620_lib/OS_HAL/src/os_hal_dma.c
+#               ./MT3620_lib/OS_HAL/src/os_hal_gpt.c
                 )
 
 include_directories(${PROJECT_NAME} PUBLIC
                     ./)
 
-# Include Folders
-target_include_directories(${PROJECT_NAME} PUBLIC
-                           ./MT3620_lib/OS_HAL/inc
-                           ./)
 
-# Libraries
-add_subdirectory(./MT3620_lib/MT3620_M4_Driver ./lib/MT3620_M4_Driver)
-
-#add_subdirectory(MT3620_lib)
-
+add_subdirectory(MT3620_lib)
 add_subdirectory(tx)
 
-target_link_libraries(${PROJECT_NAME} MT3620_M4_Driver MT3620_M4_BSP tx)
+target_link_libraries(${PROJECT_NAME} MT3620_lib MT3620_M4_Driver MT3620_M4_BSP tx)
 
 # Linker, Image
 set_target_properties(${PROJECT_NAME} PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/linker.ld)

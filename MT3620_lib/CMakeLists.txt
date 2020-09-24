@@ -2,7 +2,7 @@
 #  Licensed under the MIT License.
 
 cmake_minimum_required (VERSION 3.8)
-project (mt3620_lib C ASM)
+project (MT3620_lib C ASM)
 
 # azsphere_configure_tools(TOOLS_REVISION "20.07")
 
