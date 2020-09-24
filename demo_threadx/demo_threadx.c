@@ -258,10 +258,6 @@ void thread_3_and_4_entry(ULONG thread_input)
 
     UINT status;
 
-    bool wait = true;
-    while (wait)
-        ;
-
     /* This function is executed from thread 3 and thread 4.  As the loop
        below shows, these function compete for ownership of semaphore_0.  */
     while (1)
@@ -281,6 +277,7 @@ void thread_3_and_4_entry(ULONG thread_input)
             break;
 
         /* Sleep for 2 ticks to hold the semaphore.  */
+        
         tx_thread_sleep(2);
 
         /* Release the semaphore.  */
