@@ -64,9 +64,8 @@ void _putchar(char character)
 _Noreturn void RTCoreMain(void)
 {
 
-    bool wait = true;
-
-    while (wait);
+    // bool wait = true;
+    // while (wait);
 
     // Init Vector Table
     NVIC_SetupVectorTable();

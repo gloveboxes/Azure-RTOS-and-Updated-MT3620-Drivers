@@ -62,9 +62,9 @@ SECTIONS
     . = ALIGN(4);
     end = .;
 
-    .sysram : {
+    /* .sysram : {
         *(.sysram)
-    } >SYSRAM
+    } >SYSRAM */
 
 
     StackTop = ORIGIN(TCM) + LENGTH(TCM);
